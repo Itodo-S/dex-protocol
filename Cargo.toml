@@ -4,3 +4,16 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+
+[workspace]
+members = [
+    "core",
+    "contracts",
+    "sdk",
+    "api"
+]
+
+[workspace.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+ethers = "2.0"
